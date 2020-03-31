@@ -1,0 +1,159 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --desaturated-red: hsl(0, 36%, 70%);
+    --soft-red: hsl(0, 93%, 68%);
+    --neutral: hsl(0, 6%, 24%)
+}
+
+body {
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+.container {
+    min-height: 100vh;
+    display: flex;
+}
+
+.left {
+    background-image: url('./images/bg-pattern-desktop.svg'), linear-gradient(135deg, hsl(0, 0%, 100%), hsl(0, 100%, 98%));
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    padding-top: 4rem;
+    flex-basis: 60%;
+}
+
+.logo, .text {
+    max-width: 28rem;
+    margin: auto;
+}
+
+.logo {
+    margin-bottom: 8rem;
+}
+
+.bg-mobile {
+	display: none;
+}
+
+h1 {
+    font-size: 3rem;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+    letter-spacing: 0.9rem;
+}
+
+.red-h {
+    font-weight: 300;
+    color: var(--desaturated-red);
+}
+
+p {
+    color: var(--desaturated-red);
+    margin: 2rem 0;
+    line-height: 1.7;
+}
+
+form {
+	position: relative;
+}
+
+input {
+    padding: 1.2rem;
+    background-color: transparent;
+    color: var(--desaturated-red);
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 1rem;
+    border: 1px solid var(--desaturated-red);
+    border-radius: 2rem;
+    outline: none;
+    width: 100%;
+}
+
+input:focus {
+	border-width: 2px;
+	box-shadow: 0px 0px 10px hsla(0, 36%, 70%, 0.5);
+	outline: none;
+}
+
+.right {
+    background-image: url('./images/hero-desktop.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    flex-basis: 40%;
+}
+
+button {
+	background-image: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+	box-shadow: 2px 5px 10px hsla(0, 36%, 70%, 0.5);
+	border: none;
+	border-radius: 2rem;
+	cursor: pointer;
+	padding: 16px 44px;
+	position: absolute;
+	top: 0;
+	right: 0;
+    transition: opacity 0.2s ease;
+    outline: none;
+}
+
+button:hover {
+	opacity: 0.6;
+}
+
+.error-icon {
+	display: none;
+	position: absolute;
+	top: 15px;
+	right: 110px;
+}
+
+form.error .error-icon {
+	display: block;
+}
+
+small {
+	color: hsl(0, 93%, 68%);
+	display: none;
+	margin-top: 15px;
+	margin-left: 30px;
+}
+
+form.error small {
+	display: block;
+}
+
+@media screen and (max-width: 600px){
+
+    .bg-mobile {
+        display: block;
+        width: 100%;
+    }
+
+    .left {
+        padding: 0;
+        flex: 1;
+    }
+
+    .logo {
+        margin: 1rem 0;
+    }
+
+    .logo, .text {
+        padding: 2rem;
+    }
+
+    .right {
+        display: none;
+    }
+
+    .text {
+        text-align: center;
+    }
+} 
