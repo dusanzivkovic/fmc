@@ -19,6 +19,7 @@ body {
 img {
     max-width: 100%;
     height: auto;
+    display: block;
 }
 
 header, main {
@@ -103,10 +104,6 @@ i {
 
     header, main {
         padding: 2rem;
-    }
-
-    main {
-        flex-direction: column;
     }
 
     .text {
