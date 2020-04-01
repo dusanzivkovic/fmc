@@ -84,6 +84,12 @@ i {
     padding: .8rem;
 }
 
+@media (max-width: 1350px){
+    main {
+        flex-direction: column;
+    }
+}
+
 @media (max-width: 500px){
 
     body {
